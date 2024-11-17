@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tailwind CSS Order Layout with White Borders</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        .header { background-color: #ff0000; height: 50px; }
+        .section-1 { background-color: #ff8c00; height: 100px; }
+        .section-2 { background-color: #ffff00; height: 100px; }
+        .section-3 { background-color: #008000; height: 100px; }
+        .section-4 { background-color: #0000ff; height: 100px; }
+        .section-5 { background-color: #ffb6c1; height: 150px; }
+    </style>
+</head>
+<body class="bg-gray-900">
+
+<div class="container mx-auto">
+    <!-- Header -->
+    <div class="flex">
+        <div class="w-full header border border-white"></div>
+    </div>
+
+    <div class="flex flex-col md:flex-row">
+        <!-- Section 1 (Top Orange Area) -->
+        <div class="w-full md:w-full section-1 border border-white order-2 sm:order-1 md:order-1"></div>
+
+        <!-- Section 2 (Yellow Area) -->
+        <div class="md:w-5/12 sm:w-full section-2 border border-white order-1 sm:order-3 md:order-2"></div>
+        <div class="md:w-5/12 sm:w-full hidden md:block section-2 border border-white order-1 sm:order-3 md:order-2"></div>
+        <div class="md:w-5/12 sm:w-full hidden md:block section-2 border border-white order-1 sm:order-3 md:order-4"></div>
+        <div class="md:w-5/12 sm:w-full hidden md:block section-2 border border-white order-1 sm:order-3 md:order-4"></div>
+
+        <!-- Section 3 (Green Area) -->
+        <div class="md:w-2/12 sm:w-4/12 w-full section-3 border border-white order-3 sm:order-2 md:order-3"></div>
+
+        <!-- Section 4 (Blue Area) -->
+        <div class="md:w-2/12 sm:w-full w-full section-4 border border-white order-5 sm:order-5 md:order-4"></div>
+
+        <!-- Section 5 (Pink Area) -->
+        <div class="w-full section-5 border border-white order-4 sm:order-4 md:order-6"></div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.js"></script>
+</body>
+</html>

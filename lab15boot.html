@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bootstrap 5 Order Layout with White Borders</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<style>
+    .header { background-color: #ff0000; height: 50px; }
+    .section-1 { background-color: #ff8c00; height: 100px; }
+    .section-2 { background-color: #ffff00; height: 100px; }
+    .section-3 { background-color: #008000; height: 100px; }
+    .section-4 { background-color: #0000ff; height: 100px; }
+    .section-5 { background-color: #ffb6c1; height: 150px; }
+</style>
+</head>
+<body class="bg-dark">
+
+<div class="container-fluid">
+    <!-- Header -->
+    <div class="row">
+        <div class="col-12 header border border-white"></div>
+    </div>
+
+    <div class="row">
+        <!-- Section 1 (Top Orange Area) -->
+        <div class="col-md-12 col-sm-8 col-12 section-1 border border-white order-2 order-sm-1 order-md-1"></div>
+
+        <!-- Section 2 (Yellow Area) -->
+        <div class="col-md-5 col-sm-12 col-12 section-2 border border-white order-1 order-sm-3 order-md-2"></div>
+        <div class="col-md-5 col-sm-12 col-12 d-none d-md-block section-2 border border-white order-1 order-sm-3 order-md-2"></div>
+        <div class="col-md-5 col-sm-12 col-12 d-none d-md-block section-2 border border-white order-1 order-sm-3 order-md-4"></div>
+        <div class="col-md-5 col-sm-12 col-12 d-none d-md-block section-2 border border-white order-1 order-sm-3 order-md-4"></div>
+
+        <!-- Section 3 (Green Area) -->
+        <div class="col-md-2 col-sm-4 col-12 section-3 border border-white order-3 order-sm-2 order-md-3"></div>
+
+        <!-- Section 4 (Blue Area) -->
+        <div class="col-md-2 col-sm-12 col-12 section-4 border border-white order-5 order-sm-5 order-md-4"></div>
+
+        <!-- Section 5 (Pink Area) -->
+        <div class="col-12 section-5 border border-white order-4 order-sm-4 order-md-6"></div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
